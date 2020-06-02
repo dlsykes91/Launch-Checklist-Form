@@ -7,20 +7,30 @@ window.addEventListener("load", function() {
        let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
        let cargoMassInput = document.querySelector("input[name=cargoMass]");
  
- // Check that all form boxes have value
+ Check that all form boxes have value
        if (pilotNameInput.value === "" || copilotNameInput.value === "") {
        alert("All fields are required!");
- 
- // stop the form submission
        event.preventDefault();
-       } else if (fuelLevelInput.value === "" || cargoMassInput.value === "") {
+      } 
+      else if (fuelLevelInput.value === "" || cargoMassInput.value === "") {
        alert("All fields are required!");
- 
- // stop the form submission
        event.preventDefault();
        } 
+
+       let checklist = document.getElementById("faultyItems");
+       checklist.style.visibility = hidden;
+       let pilotStatus = document.getElementById("pilotStatus");
+       pilotStatus.innerHTML =`Pilot ${pilotNameInput} is ready for launch.`;
+       let copilotStatus = document.getElementById('copilotStatus');
+       copilotStatus.innerHTML = `Copilot ${copilotNameInput} is ready for la
+ 
+      }); // close eventlistner submit
+
+      // Add pilot and copilot Status
+     
+         unch`;
+    
       
-   }); // close eventlistner submit
  
  }); // close loadlistner
     
